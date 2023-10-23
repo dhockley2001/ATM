@@ -1,4 +1,0 @@
--------------------------------------------------------------------------------
-Test set: com.dhockley2001.atm.atm.AtmApplicationTests
--------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 12.739 s - in com.dhockley2001.atm.atm.AtmApplicationTests
