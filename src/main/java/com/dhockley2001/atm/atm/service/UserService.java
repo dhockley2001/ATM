@@ -10,6 +10,8 @@ public interface UserService {
 
     List<User> getAllUsers();
 
+    User getUserById(Long userId);
+
     User updateUser(User user, Long userId);
 
     void deleteUserById(Long userId);

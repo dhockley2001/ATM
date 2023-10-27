@@ -27,6 +27,18 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
+    public User getUserById(Long userId) {
+
+        Optional<User> userOptional = userRepository.findById(userId);
+
+        if (userOptional.isPresent()) {
+            return userOptional.get();
+        } else {
+            return null;
+        }
+    }
+
+    @Override
     public User updateUser(User user, Long userId) {
 
         Optional<User> userOptional = userRepository.findById(userId);
@@ -38,8 +50,6 @@ public class UserServiceImpl implements UserService {
             existingUser.setAccountNumber(user.getAccountNumber());
             existingUser.setPIN(user.getPIN());
             existingUser.setSalt(user.getSalt());
-
-            
 
             return userRepository.save(existingUser);
         } else {
